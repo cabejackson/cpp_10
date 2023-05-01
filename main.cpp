@@ -1,11 +1,13 @@
 #include <iostream>
+using namespace std;
 
 int main() {
-    //const
-    // - A compile time contratint that an object cannot be modified
-    //example:
-    const int i = 9;
-    i = 6;
+    
+    //variables
+    float annualSalary = 50000.99;
+    float monthlySalary = annualSalary/12;
+
+    cout << "Your monthly salary is " << monthlySalary << endl;
 
     return 0;
 }
