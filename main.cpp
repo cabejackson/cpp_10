@@ -21,5 +21,11 @@ int main() {
     cout << "Size of float is " << sizeof(float) << " bytes" << endl;
     cout << "Size of double is " << sizeof(double) << " bytes" << endl;
 
+    //datatype overflow
+
+    int intMax = INT_MAX;
+    cout << intMax << endl;
+    cout << intMax + 1 << endl;
+
     return 0;
 }
