@@ -2,11 +2,17 @@
 using namespace std;
 
 int main() {
-    //const
-    // - A compile time contratint that an object cannot be modified
-    //example:
-    const int i = 9;
-    i = 6;
+    int num;
+
+    cout << "Please enter a whole number: ";
+    cin >> num;
+
+    if (num % 2 == 0) {
+        cout << "Your number is even" << endl;
+    }else {
+        cout << "Your number is odd" << endl; 
+    };
+    cout << "Thanks, bye!";
 
     return 0;
 }
