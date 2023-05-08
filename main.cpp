@@ -26,7 +26,16 @@ int main() {
     cout << "counter2++ after: " << counter2 << endl;
     cout << "++counter2: " << ++counter2 << endl; //pre increment operator
 
-    // system("clear screen");
+    system("clear screen");
+
+    //relational operators
+    // <, >, <=, >=, ==, !=
+
+    int a = 5, b = 5;
+    cout << (a < b) << endl; // false
+    cout << (a <= b) << endl; // true
+    cout << (a == b) << endl; // true
+    cout << (a != b) << endl; // false
 
     return 0;
 }
