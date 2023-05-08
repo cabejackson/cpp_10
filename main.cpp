@@ -37,5 +37,13 @@ int main() {
     cout << (a == b) << endl; // true
     cout << (a != b) << endl; // false
 
+    system("clear screen");
+
+    //logical operators
+    // &&, ||, !
+    cout << ( a == 5 && b == 15) << endl; //false
+    cout << ( a == 5 || b == 15) << endl; //true
+    cout << !( a == 5 || b == 15) << endl; //false
+
     return 0;
 }
