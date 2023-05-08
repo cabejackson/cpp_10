@@ -52,6 +52,29 @@ int main() {
     int x = 5; //assigns 5 to x
     x += 7; // shorter way of writing x = x + 7;
     cout << x << endl; //12
+
+    system("clear screen");
+
+    //ternary operators 
+    //example - guessing game
+
+    int hostUserNum, guestUserNum;
+    
+    cout << "Host, please enter a number: ";
+    cin >> hostUserNum;
+    system("clear screen");
+
+    cout << "Guest, please enter a number: ";
+    cin >> guestUserNum;
+
+    (guestUserNum == hostUserNum)? cout << "Correct. You WIN!" << endl : cout << "Incorrect. You LOSE!" << endl;
+
+
+    // if (guestUserNum == hostUserNum) {
+    //     cout << "Correct. You WIN!" << endl;
+    // } else {
+    //     cout << "Incorrect. You LOSE!" << endl;
+    // }
     
 
     return 0;
