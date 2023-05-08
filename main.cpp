@@ -2,11 +2,21 @@
 using namespace std;
 
 int main() {
-    //const
-    // - A compile time contratint that an object cannot be modified
-    //example:
-    const int i = 9;
-    i = 6;
+
+    //program for swapping values of two variables
+    //using a third variable
+
+
+    int a = 20;
+    int b = 10;
+
+    cout << "a = " << a << " and b = " << b << endl; // a = 20 and b = 10
+
+    int temp = a; //temporary variable that holds the value of a
+    a = b;
+    b = temp;
+
+    cout << "a = " << a << " and b = " << b << endl; // a = 10 and b = 20
 
     return 0;
 }
