@@ -20,6 +20,13 @@ int main() {
     counter--;
     cout << counter << endl;
 
-    
+    int counter2 = 3;
+
+    cout << "counter2++: " << counter2++ << endl; //post increment operator
+    cout << "counter2++ after: " << counter2 << endl;
+    cout << "++counter2: " << ++counter2 << endl; //pre increment operator
+
+    // system("clear screen");
+
     return 0;
 }
