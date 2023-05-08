@@ -2,11 +2,14 @@
 using namespace std;
 
 int main() {
-    //const
-    // - A compile time contratint that an object cannot be modified
-    //example:
-    const int i = 9;
-    i = 6;
+
+    //binary operators
+    // +, -, *, /, %
+
+    cout << 5 + 2 << endl;
+    cout << 5 / 2 << endl; // int
+    cout << 5.0 / 2.0 << endl; // double/float
+    cout << 5 % 2 << endl; // modulo -- remainder
 
     return 0;
 }
