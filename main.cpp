@@ -66,16 +66,8 @@ int main() {
 
     cout << "Guest, please enter a number: ";
     cin >> guestUserNum;
-
-    (guestUserNum == hostUserNum)? cout << "Correct. You WIN!" << endl : cout << "Incorrect. You LOSE!" << endl;
-
-
-    // if (guestUserNum == hostUserNum) {
-    //     cout << "Correct. You WIN!" << endl;
-    // } else {
-    //     cout << "Incorrect. You LOSE!" << endl;
-    // }
     
+    (guestUserNum == hostUserNum)? cout << "Correct. You WIN!" << endl : cout << "Incorrect. You LOSE!" << endl;
 
     return 0;
 }
