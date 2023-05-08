@@ -45,5 +45,14 @@ int main() {
     cout << ( a == 5 || b == 15) << endl; //true
     cout << !( a == 5 || b == 15) << endl; //false
 
+    system("clear screen");
+
+    //assignment operators
+    // =, +=, -=, /=, %=
+    int x = 5; //assigns 5 to x
+    x += 7; // shorter way of writing x = x + 7;
+    cout << x << endl; //12
+    
+
     return 0;
 }
