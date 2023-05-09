@@ -9,18 +9,10 @@ int main() {
     cin >> num1 >> operation >> num2;
 
     switch(operation) {
-        case '+': 
-            cout << num1 + num2 << endl;
-            break;
-        case '-':
-            cout << num1 - num2 << endl;
-            break;
-        case '*':
-            cout << num1 * num2 << endl;
-            break;
-        case '/':
-            cout << num1 / num2 << endl;
-            break;
+        case '+': cout << num1 + num2 << endl; break;
+        case '-': cout << num1 - num2 << endl; break;
+        case '*': cout << num1 * num2 << endl; break;
+        case '/': cout << num1 / num2 << endl; break;
         case '%':
             bool isNum1Int, isNum2Int;
             isNum1Int = ((int)num1 == num1); //5 == 5.0
