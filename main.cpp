@@ -25,6 +25,9 @@ int main() {
     if (num == 0)
         cout << "You have entered 0." << endl;
     else {
+        if (num < 0) {
+            num *= -1; //get abs value of num
+        }
         while( num > 0) {
             num /= 10;
             counter++;
