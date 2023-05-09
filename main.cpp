@@ -17,6 +17,7 @@ int main() {
     // };
 
     //count digits of a number
+    //what about nums larger than int?
 
     int num, counter = 0;
     cout << "Enter a number: ";
