@@ -2,11 +2,29 @@
 using namespace std;
 
 int main() {
-    //const
-    // - A compile time contratint that an object cannot be modified
-    //example:
-    const int i = 9;
-    i = 6;
+    double num1, num2;
+    char operation;
+    cout << "*****Cabe's Calculator*****" << endl;
+    cout << "Please enter a calculation: " << endl;
+    cin >> num1 >> operation >> num2;
 
+    switch(operation) {
+        case '+': 
+            cout << num1 + num2 << endl;
+            break;
+        case '-':
+            cout << num1 - num2 << endl;
+            break;
+        case '*':
+            cout << num1 * num2 << endl;
+            break;
+        case '/':
+            cout << num1 / num2 << endl;
+            break;
+        default:
+            cout << "invalid operation" << endl;
+            break; 
+    }
+    
     return 0;
 }
