@@ -26,6 +26,5 @@ int main() {
             cout << "invalid operation" << endl;
             break; 
     }
-    
     return 0;
 }
