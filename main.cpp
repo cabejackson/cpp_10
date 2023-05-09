@@ -3,10 +3,7 @@ using namespace std;
 
 int main() {
 
-    //leap year rule:
-    // (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
     int year, month;
-
     cout << "Please enter the year and month (ex: 2004 4): ";
     cin >> year >> month;
 
