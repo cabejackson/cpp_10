@@ -21,6 +21,7 @@ int main() {
         case 8:
         case 10:
         case 12: cout << "31 days month" << endl; break;
+        default: cout << "Invalid" << endl;
    }
 
     return 0;
