@@ -75,13 +75,21 @@ int main() {
     cout << "Enter a number: ";
     cin >> num;
 
-    // for (int i = 1; i <= num; i++ ) {
-    //     factorial *= i;
-    // }
-    for (int i = num; i >= 1; i-- ) {
-        factorial *= i;
+    // incrementing
+    if (num > 0){
+        for (int i = 1; i <= num; i++ ) {
+            factorial *= i;
+        }
+        //decreasing
+        // for (int i = num; i >= 1; i-- ) {
+        //     factorial *= i;
+        // }
+        cout << num << "!= " << factorial << endl;
+    } else if (num == 0) {
+        cout << num << "!= 1" << endl;
+    } else {
+        cout << " Cannot obtain the factorial of a negative number." << endl;
     }
-    cout << num << "!= " << factorial << endl;
 
     return 0;
 }
