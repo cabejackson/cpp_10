@@ -3,8 +3,10 @@ using namespace std;
 
 void functionName(); //func declaration
 
-void introduceMe(string name) {
+void introduceMe(string name, string city, int age) {
     cout << "My name is " << name << endl;
+    cout << "I am from " << city << endl;
+    cout << "I am " << age << " years old." << endl;
 }
 
 int main() {
@@ -14,8 +16,8 @@ int main() {
     // //funcs are resuable
     // functionName();
     // functionName();
-    introduceMe("Cabe");
-    introduceMe("Johnnie");
+    introduceMe("Cabe", "NYC", 65);
+    introduceMe("Johnnie", "Toronto", 54);
 
     return 0;
 }
