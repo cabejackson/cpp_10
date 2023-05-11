@@ -13,16 +13,11 @@ bool isPrimeNumber(int num) {
 
 int main() {
 
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-
-    bool isPrime = isPrimeNumber(num);
-
-    if (isPrime)
-        cout << num <<" is a prime number!" << endl;
-    else
-        cout << num <<" is not a prime number!" << endl;
+    for ( int i = 1; i <= 100000; i++) {
+        bool isPrime = isPrimeNumber(i);
+        if (isPrime)
+            cout << i <<" is a prime number!" << endl;
+    }
 
     return 0;
 }
