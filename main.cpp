@@ -54,19 +54,31 @@ int main() {
 
     //Pin validation
 
-    int userPin = 1234, pinEntered, errorCounter = 0;
+    // int userPin = 1234, pinEntered, errorCounter = 0;
 
-    do {
-        cout << "PIN: ";
-        cin >> pinEntered;
-        if (pinEntered != userPin)
-            errorCounter++;
-    }while(errorCounter < 3 && pinEntered != userPin);
+    // do {
+    //     cout << "PIN: ";
+    //     cin >> pinEntered;
+    //     if (pinEntered != userPin)
+    //         errorCounter++;
+    // }while(errorCounter < 3 && pinEntered != userPin);
 
-    if (errorCounter < 3)
-        cout << "Loading..." << endl;
-    else
-        cout << "Blocked..." << endl;
+    // if (errorCounter < 3)
+    //     cout << "Loading..." << endl;
+    // else
+    //     cout << "Blocked..." << endl;
+
+    //Calculate the factorial of a number
+
+    int num, factorial = 1;
+
+    cout << "Enter a number: ";
+    cin >> num;
+
+    for (int i = 1; i <= num; i++ ) {
+        factorial *= i;
+    }
+    cout << num << "!= " << factorial << endl;
 
     return 0;
 }
