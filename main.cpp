@@ -39,18 +39,34 @@ int main() {
     //reversing number
     //confusing
 
-    int num, reversedNum = 0, lastDigit;
-    cout << "Please enter a number: ";
-    cin >> num;
+    // int num, reversedNum = 0, lastDigit;
+    // cout << "Please enter a number: ";
+    // cin >> num;
 
-    while (num != 0) {
-        reversedNum *= 10;
-        lastDigit = num % 10;
-        reversedNum += lastDigit;
-        num /= 10;
-    }
+    // while (num != 0) {
+    //     reversedNum *= 10;
+    //     lastDigit = num % 10;
+    //     reversedNum += lastDigit;
+    //     num /= 10;
+    // }
 
-    cout << "Reversed: " << reversedNum << endl;
+    // cout << "Reversed: " << reversedNum << endl;
+
+    //Pin validation
+
+    int userPin = 1234, pinEntered, errorCounter = 0;
+
+    do {
+        cout << "PIN: ";
+        cin >> pinEntered;
+        if (pinEntered != userPin)
+            errorCounter++;
+    }while(errorCounter < 3 && pinEntered != userPin);
+
+    if (errorCounter < 3)
+        cout << "Loading..." << endl;
+    else
+        cout << "Blocked..." << endl;
 
     return 0;
 }
