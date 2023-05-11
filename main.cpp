@@ -13,11 +13,11 @@ bool isPrimeNumber(int num) {
 
 int main() {
 
-    for ( int i = 1; i <= 100000; i++) {
+    for (int i = 1; i <= 100000; i++) {
         bool isPrime = isPrimeNumber(i);
+        //TODO: Add a counter for how many prime numbers there are w/in the range
         if (isPrime)
             cout << i <<" is a prime number!" << endl;
     }
-
     return 0;
 }
