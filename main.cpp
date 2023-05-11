@@ -3,7 +3,7 @@ using namespace std;
 
 void functionName(); //func declaration
 
-void introduceMe(string name, string city, int age) {
+void introduceMe(string name, string city, int age = 0) {
     cout << "My name is " << name << endl;
     cout << "I am from " << city << endl;
     cout << "I am " << age << " years old." << endl;
@@ -17,7 +17,7 @@ int main() {
     // functionName();
     // functionName();
     introduceMe("Cabe", "NYC", 65);
-    introduceMe("Johnnie", "Toronto", 54);
+    introduceMe("Johnnie", "Toronto");
 
     return 0;
 }
