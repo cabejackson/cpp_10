@@ -1,28 +1,24 @@
 #include <iostream>
 using namespace std;
 
-void functionName(); //func declaration
-
-void introduceMe(string name, string city, int age = 0) {
-    cout << "My name is " << name << endl;
-    cout << "I am from " << city << endl;
-    if (age != 0)
-    cout << "I am " << age << " years old." << endl;
-}
-
 int main() {
 
-    cout << "Hello world from main()! \n";
-    functionName();
-    // //funcs are resuable
-    // functionName();
-    // functionName();
-    introduceMe("Cabe", "NYC", 65);
-    introduceMe("Johnnie", "Toronto");
+    int num;
+    bool isPrime = true;
+
+    cout << "Enter a number: ";
+    cin >> num;
+
+    for ( int i = 2; i < num; i++){
+        if (num % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime)
+        cout << num <<" is a prime number!" << endl;
+    else
+        cout << num <<" is not a prime number!" << endl;
 
     return 0;
-}
-
-void functionName() { // func definition
-    cout << "hello from function() \n";
 }
