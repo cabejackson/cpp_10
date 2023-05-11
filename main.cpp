@@ -12,17 +12,19 @@ void introduceMe(string name, string city, int age = 0) {
 
 int main() {
 
-    cout << "Hello world from main()! \n";
-    functionName();
-    // //funcs are resuable
-    // functionName();
-    // functionName();
-    introduceMe("Cabe", "NYC", 65);
-    introduceMe("Johnnie", "Toronto");
+    string name, city;
+    int age;
+
+    cout << "Name: ";
+    cin >> name;
+    cout << "City: ";
+    cin >> city;
+    cout << "Age: ";
+    cin >> age;
+    introduceMe(name, city, age);
+
+    // introduceMe("Cabe", "NYC", 65);
+    // introduceMe("Johnnie", "Toronto");
 
     return 0;
-}
-
-void functionName() { // func definition
-    cout << "hello from function() \n";
 }
