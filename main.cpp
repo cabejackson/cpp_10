@@ -2,11 +2,11 @@
 using namespace std;
 
 int main() {
-    //const
-    // - A compile time contratint that an object cannot be modified
-    //example:
-    const int i = 9;
-    i = 6;
-
+    for (int i = 1; i <= 12; i++){
+        for (int j = 0; j <= 12; j++){
+            cout << i << " * " << j << " = " << i * j << endl;
+        }
+        cout << endl;
+    }
     return 0;
 }
