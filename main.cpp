@@ -1,12 +1,16 @@
 #include <iostream>
 using namespace std;
 
+void functionName(); //func declaration
+
 int main() {
-    //const
-    // - A compile time contratint that an object cannot be modified
-    //example:
-    const int i = 9;
-    i = 6;
+
+    cout << "Hello world from main()! \n";
+    functionName();
 
     return 0;
+}
+
+void functionName() { // func definition
+    cout << "hello from function() \n";
 }
