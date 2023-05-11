@@ -2,23 +2,22 @@
 using namespace std;
 
 bool isPrimeNumber(int num) {
-    bool isPrime = true;
-        for ( int i = 2; i < num; i++){
+    for (int i = 2; i < num; i++){
         if (num % i == 0) {
-            isPrime = false;
-            break;
+            return false;
         }
     }
-    return isPrime;
+    return true;
 }
+
 
 int main() {
 
     int num;
-    bool isPrime = isPrimeNumber(num);
-
     cout << "Enter a number: ";
     cin >> num;
+
+    bool isPrime = isPrimeNumber(num);
 
     if (isPrime)
         cout << num <<" is a prime number!" << endl;
