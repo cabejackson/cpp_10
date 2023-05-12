@@ -1,12 +1,56 @@
 #include <iostream>
 using namespace std;
 
+void showMenu() {
+    cout << " --------Menu---------" << endl;
+    cout << " 1. Check balance " << endl;
+    cout << " 2. Deposit " << endl;
+    cout << " 3. Withdraw " << endl;
+    cout << " 4. Exit " << endl;
+    cout << " ---------------------" << endl;
+};
+
 int main() {
-    //const
-    // - A compile time contratint that an object cannot be modified
-    //example:
-    const int i = 9;
-    i = 6;
+
+    // functionality - check balance, deposit, withdraw, show menu
+
+    int option;
+    double balance = 500;
+    double depositAmount;
+    double withdrawAmount;
+
+    do {
+        showMenu();
+        cout << "Please choose an option (1, 2, 3, 4): ";
+        cin >> option;
+
+        switch(option) {
+            case 1:
+                cout << "Balance is: $" << balance << endl;
+                break;
+            case 2:
+                cout << "Deposit amount: $";
+                cin >> depositAmount;
+                if (depositAmount > 0) { 
+                balance += depositAmount;
+                } else {
+                    cout << "Deposit must be greater than 0" << endl;
+                }
+                cout << "The Balance is now: $" << balance << endl;
+                cout << endl;
+                break;
+            case 3:
+                cout << "How much would you like to withdraw?: $";
+                cin >> withdrawAmount;
+                if (withdrawAmount <= balance) {
+                    balance -= withdrawAmount;
+                    cout << "The Balance is now: $" << balance << endl;
+                } else {
+                    cout << "Insufficient funds." << endl;
+                }
+                break;
+        };
+    } while(option != 4);
 
     return 0;
 }
