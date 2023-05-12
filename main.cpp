@@ -2,7 +2,7 @@
 using namespace std;
 
 //generic
-template<typename T>
+template<typename T> // this can also be template<class Type>, which is the preferred way though?
 void Swap( T& a, T& b) { //passing variables by reference
     T temp = a;
     a = b;
@@ -28,7 +28,7 @@ int main() {
         int a = 5, b = 7;
 
         cout << a << " - " << b << endl;
-        Swap<int>(a, b); 
+        Swap<int>(a, b); //is it better to explicitly put the type <int> here? even though it works without it
         cout << a << " - " << b << endl;
 
         char c = 'c', d = 'd';
