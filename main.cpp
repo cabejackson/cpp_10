@@ -13,6 +13,7 @@ void showMenu() {
 int main() {
 
     // functionality - check balance, deposit, withdraw, show menu
+    //TODO - add 2 accounts and a transfer option
 
     int option;
     double balance = 500;
