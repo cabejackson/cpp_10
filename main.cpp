@@ -1,28 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void functionName(); //func declaration
-
-void introduceMe(string name, string city, int age = 0) {
-    cout << "My name is " << name << endl;
-    cout << "I am from " << city << endl;
-    if (age != 0)
-    cout << "I am " << age << " years old." << endl;
-}
-
+//sum nums between m and n
 int main() {
 
-    cout << "Hello world from main()! \n";
-    functionName();
-    // //funcs are resuable
-    // functionName();
-    // functionName();
-    introduceMe("Cabe", "NYC", 65);
-    introduceMe("Johnnie", "Toronto");
+    int m = 2, n = 4;
+    //TODO: ask user to enter the nums and check for which one is smaller/larger
+
+    int sum = 0;
+    for(int i = m; i <= n; i++) {
+        sum += i;
+    }
+    cout << "Sum is equal to " << sum << endl;
+
+
 
     return 0;
-}
-
-void functionName() { // func definition
-    cout << "hello from function() \n";
 }
