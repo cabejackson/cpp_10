@@ -17,6 +17,19 @@ public: //access modifier, but private by default
         SubscribersCount = 0;
     };
 
+    void setName(string name) {
+        Name = name;
+    };
+    string getName(){
+        return Name;
+    };
+    void setOwnerName(string ownerName) {
+        OwnerName = ownerName;
+    };
+    string getOwnerName() {
+        return OwnerName;
+    };
+    
     //class method
     void GetInfo() {
         cout << "Name: " << Name << endl; 
