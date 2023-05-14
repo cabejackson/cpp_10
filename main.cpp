@@ -15,6 +15,18 @@ public: //access modifier, but private by default
         OwnerName = ownerName;
         SubscribersCount = 0;
     }
+
+    //class method
+    void GetInfo() {
+        cout << "Name: " << Name << endl; 
+        cout << "Owner Name: " << OwnerName << endl; 
+        cout << "Subscribers Count: " << SubscribersCount << endl; 
+        cout << "Videos: " << endl;
+        //these lines below trigger a warning in my editor
+        for (string videoTitle : PublishedVideoTitles) {
+            cout << videoTitle << endl;
+        }
+    }
 };
 
 int main() {
@@ -27,18 +39,8 @@ int main() {
     //this line below doesn't work in my editor
     // ytChannel.PublishedVideoTitles = {"C++ for beginnners Video 1", "HTML & CSS Video 1", "C++ OOP Video 1"};
 
-    cout << "Name: " << ytChannel.Name << endl; 
-    cout << "Owner Name: " << ytChannel.OwnerName << endl; 
-    cout << "Subscribers Count: " << ytChannel.SubscribersCount << endl; 
-    cout << "Videos: " << endl;
-    //these lines below trigger a warning in my editor
-    for (string videoTitle : ytChannel.PublishedVideoTitles) {
-        cout << videoTitle << endl;
-    }
-
-    cout << "Name: " << ytChannel2.Name << endl; 
-    cout << "Owner Name: " << ytChannel2.OwnerName << endl; 
-    cout << "Subscribers Count: " << ytChannel2.SubscribersCount << endl; 
+    ytChannel.GetInfo();
+    ytChannel2.GetInfo();
 
     return 0;
 }
