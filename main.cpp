@@ -8,6 +8,7 @@ public: //access modifier, but private by default
     string OwnerName;
     int SubscribersCount;
     list<string> PublishedVideoTitles;
+
 };
 
 int main() {
@@ -28,6 +29,18 @@ int main() {
     // for (string videoTitle: ytChannel.PublishedVideoTitles) {
     //     cout << videoTitle << endl;
     // }
+
+    //setup for why constructors and class methods are useful
+    //not very DRY
+    YoutubeChannel ytChannel2;
+    //assign values to Name, OwnerName, etc. properties
+    ytChannel2.Name = "CodeBeauty";
+    ytChannel2.OwnerName = "Saldina";
+    ytChannel2.SubscribersCount = 2000;
+
+    cout << "Name: " << ytChannel2.Name << endl; 
+    cout << "Owner Name: " << ytChannel2.OwnerName << endl; 
+    cout << "Subscribers Count: " << ytChannel2.SubscribersCount << endl; 
 
     return 0;
 }
