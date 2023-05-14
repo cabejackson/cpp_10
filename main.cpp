@@ -15,7 +15,7 @@ public: //access modifier, but private by default
         Name = name;
         OwnerName = ownerName;
         SubscribersCount = 0;
-    }
+    };
 
     //class method
     void GetInfo() {
@@ -27,12 +27,13 @@ public: //access modifier, but private by default
         for (string videoTitle : PublishedVideoTitles) {
             cout << videoTitle << endl;
         }
-    }
+    };
     void Subscribe() {
         SubscribersCount++;
     };
     void Unsubscribe() {
-        SubscribersCount--;
+        if (SubscribersCount > 0)
+            SubscribersCount--;
     };
     void PublishVideo(string title) {
         PublishedVideoTitles.push_back(title);
@@ -50,12 +51,12 @@ int main() {
     // ytChannel.PublishedVideoTitles = {"C++ for beginnners Video 1", "HTML & CSS Video 1", "C++ OOP Video 1"};
 
     
-    ytChannel.Subscribe();
-    ytChannel.Subscribe();
-    ytChannel.Subscribe();
+    // ytChannel.Subscribe();
+    // ytChannel.Subscribe();
+    // ytChannel.Subscribe();
     ytChannel.Unsubscribe();
     ytChannel.GetInfo();
     ytChannel2.GetInfo();
 
     return 0;
-}
+};
