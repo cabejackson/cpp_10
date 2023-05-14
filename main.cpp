@@ -9,15 +9,22 @@ public: //access modifier, but private by default
     int SubscribersCount;
     list<string> PublishedVideoTitles;
 
+    //constructor
+    YoutubeChannel(string name, string ownerName) {
+        Name = name;
+        OwnerName = ownerName;
+        SubscribersCount = 0;
+    }
 };
 
 int main() {
 
-    YoutubeChannel ytChannel;
+    YoutubeChannel ytChannel("Cur1ousCod3r", "Cabe");
+    // YoutubeChannel ytChannel;
     //assign values to Name, OwnerName, etc. properties
-    ytChannel.Name = "Cur1ousCod3r";
-    ytChannel.OwnerName = "Cabe";
-    ytChannel.SubscribersCount = 1800;
+    // ytChannel.Name = "Cur1ousCod3r";
+    // ytChannel.OwnerName = "Cabe";
+    // ytChannel.SubscribersCount = 1800;
     //this line below doesn't work in my editor
     // ytChannel.PublishedVideoTitles = {"C++ for beginnners Video 1", "HTML & CSS Video 1", "C++ OOP Video 1"};
 
@@ -32,11 +39,12 @@ int main() {
 
     //setup for why constructors and class methods are useful
     //not very DRY
-    YoutubeChannel ytChannel2;
-    //assign values to Name, OwnerName, etc. properties
-    ytChannel2.Name = "CodeBeauty";
-    ytChannel2.OwnerName = "Saldina";
-    ytChannel2.SubscribersCount = 2000;
+    YoutubeChannel ytChannel2("CodeBeauty", "Saldina");
+    // YoutubeChannel ytChannel2;
+    // //assign values to Name, OwnerName, etc. properties
+    // ytChannel2.Name = "CodeBeauty";
+    // ytChannel2.OwnerName = "Saldina";
+    // ytChannel2.SubscribersCount = 2000;
 
     cout << "Name: " << ytChannel2.Name << endl; 
     cout << "Owner Name: " << ytChannel2.OwnerName << endl; 
