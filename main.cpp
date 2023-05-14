@@ -34,14 +34,17 @@ public: //access modifier, but private by default
     void Unsubscribe() {
         SubscribersCount--;
     };
+    void PublishVideo(string title) {
+        PublishedVideoTitles.push_back(title);
+    };
 };
 
 int main() {
 
     YoutubeChannel ytChannel("Cur1ousCod3r", "Cabe");
-    // ytChannel.PublishedVideoTitles.push_back("C++ for beginners");
-    // ytChannel.PublishedVideoTitles.push_back("HTML & CSS for beginners");
-    // ytChannel.PublishedVideoTitles.push_back("C++ OOP");
+    ytChannel.PublishVideo("C++ for beginners");
+    ytChannel.PublishVideo("HTML & CSS for beginners");
+    ytChannel.PublishVideo("C++ OOP");
     YoutubeChannel ytChannel2("CodeBeauty", "Saldina");
     //this line below doesn't work in my editor
     // ytChannel.PublishedVideoTitles = {"C++ for beginnners Video 1", "HTML & CSS Video 1", "C++ OOP Video 1"};
