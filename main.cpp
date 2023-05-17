@@ -29,7 +29,7 @@ public: //access modifier, but private by default
     string getOwnerName() {
         return OwnerName;
     };
-    
+
     //class method
     void GetInfo() {
         cout << "Name: " << Name << endl; 
@@ -54,22 +54,6 @@ public: //access modifier, but private by default
 };
 
 int main() {
-
-    YoutubeChannel ytChannel("Cur1ousCod3r", "Cabe");
-    ytChannel.PublishVideo("C++ for beginners");
-    ytChannel.PublishVideo("HTML & CSS for beginners");
-    ytChannel.PublishVideo("C++ OOP");
-    YoutubeChannel ytChannel2("CodeBeauty", "Saldina");
-    //this line below doesn't work in my editor
-    // ytChannel.PublishedVideoTitles = {"C++ for beginnners Video 1", "HTML & CSS Video 1", "C++ OOP Video 1"};
-
-    
-    // ytChannel.Subscribe();
-    // ytChannel.Subscribe();
-    // ytChannel.Subscribe();
-    ytChannel.Unsubscribe();
-    ytChannel.GetInfo();
-    ytChannel2.GetInfo();
 
     return 0;
 };
