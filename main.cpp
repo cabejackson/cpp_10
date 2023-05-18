@@ -2,11 +2,12 @@
 using namespace std;
 
 int main() {
-    //const
-    // - A compile time contratint that an object cannot be modified
-    //example:
-    const int i = 9;
-    i = 6;
+
+    int n = 5; //a variable
+    cout << "Variable: " << n << endl;
+    //how do we check the address of n
+    cout << "Address: " << &n << endl;
+
 
     return 0;
 }
