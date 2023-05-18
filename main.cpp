@@ -53,7 +53,31 @@ public: //access modifier, but private by default
     };
 };
 
+class CookingYoutubeChannel: public YoutubeChannel {
+public:
+    CookingYoutubeChannel(string name, string ownerName):YoutubeChannel(name, ownerName) {
+
+    }
+
+    void Practice() {
+        cout << "Practicing cooking, learning new recipies, experimenting with spices... " << endl;
+    }
+
+};
+
 int main() {
 
+    CookingYoutubeChannel cookingYtChannel("Amy's Kitchen", "Amy");
+    cookingYtChannel.PublishVideo("Apple pie");
+    cookingYtChannel.PublishVideo("Chocolate Cake");
+    cookingYtChannel.Subscribe();
+    cookingYtChannel.Subscribe();
+    cookingYtChannel.Practice();
+
+    cookingYtChannel.GetInfo();
+
+    YoutubeChannel ytChannel("Cabe Codes", "Cabe");
+    // ytChannel. //Practice() is not available on ytChannel
+    
     return 0;
 };
