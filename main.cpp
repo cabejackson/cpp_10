@@ -13,6 +13,10 @@ int main() {
 
     //dereferencing pointers
     cout << "Variable: " << *ptr << endl; //outputs value at that location
+    //reassigning value at pointer location
+    *ptr = 10;
+    cout << "New Value: " << *ptr << endl; //outputs value at that location
+    cout << "Variable: " << n << endl;
 
 
     return 0;
