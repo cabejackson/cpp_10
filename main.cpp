@@ -64,21 +64,24 @@ public:
 
 };
 
+class SingersYoutubeChannel: public YoutubeChannel {
+public:
+    //constructor
+    SingersYoutubeChannel(string name, string ownerName): YoutubeChannel(name, ownerName) {
+
+    };
+    void Practice() {
+        cout << OwnerName << " is taking singing classes, learning new songs, learning how to dance... " << endl;
+    };
+};
+
 int main() {
 
     CookingYoutubeChannel cookingYtChannel("Amy's Kitchen", "Amy");
-    CookingYoutubeChannel cookingYtChannel2("Johnnie's Kitchen", "Johnnie");
-    cookingYtChannel.PublishVideo("Apple pie");
-    cookingYtChannel.PublishVideo("Chocolate Cake");
-    cookingYtChannel.Subscribe();
-    cookingYtChannel.Subscribe();
+    SingersYoutubeChannel singersYtChannel("Shante Sings ", "Shante");
+
     cookingYtChannel.Practice();
-    cookingYtChannel2.Practice();
-
-    cookingYtChannel.GetInfo();
-
-    YoutubeChannel ytChannel("Cabe Codes", "Cabe");
-    // ytChannel. //Practice() is not available on ytChannel
+    singersYtChannel.Practice();
 
     return 0;
 };
