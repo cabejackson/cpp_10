@@ -5,10 +5,10 @@ using namespace std;
 class YoutubeChannel {
 private:
     string Name;
-    string OwnerName;
     int SubscribersCount;
     list<string> PublishedVideoTitles;
-
+protected:
+    string OwnerName;
 public: //access modifier, but private by default
     //constructor
     YoutubeChannel(string name, string ownerName) {
@@ -56,28 +56,29 @@ public: //access modifier, but private by default
 class CookingYoutubeChannel: public YoutubeChannel {
 public:
     CookingYoutubeChannel(string name, string ownerName):YoutubeChannel(name, ownerName) {
-
-    }
+    };
 
     void Practice() {
-        cout << "Practicing cooking, learning new recipies, experimenting with spices... " << endl;
-    }
+        cout << OwnerName << " is practicing cooking, learning new recipies, experimenting with spices... " << endl;
+    };
 
 };
 
 int main() {
 
     CookingYoutubeChannel cookingYtChannel("Amy's Kitchen", "Amy");
+    CookingYoutubeChannel cookingYtChannel2("Johnnie's Kitchen", "Johnnie");
     cookingYtChannel.PublishVideo("Apple pie");
     cookingYtChannel.PublishVideo("Chocolate Cake");
     cookingYtChannel.Subscribe();
     cookingYtChannel.Subscribe();
     cookingYtChannel.Practice();
+    cookingYtChannel2.Practice();
 
     cookingYtChannel.GetInfo();
 
     YoutubeChannel ytChannel("Cabe Codes", "Cabe");
     // ytChannel. //Practice() is not available on ytChannel
-    
+
     return 0;
 };
