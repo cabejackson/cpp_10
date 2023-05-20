@@ -65,6 +65,8 @@ int main() {
     cout << "Min is " << min << endl;
     cout << "Max is " << max << endl;
 
+    //TODO: return min and max w/o using pointers
+
 
 
     return 0;
