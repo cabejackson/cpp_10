@@ -14,11 +14,12 @@ int main() {
         cin >> myArray[i];
     }
     for (int i = 0; i < size; i++){
-        // cout << myArray[i] << " ";
-        cout << *(myArray+i) << " "; //another way to access the element, by dereferencing
+        cout << myArray[i] << " ";
+        // cout << *(myArray+i) << " "; //another way to access the element, by dereferencing
     }
 
-
+    delete[]myArray;
+    myArray = NULL;
 
     return 0;
 }
