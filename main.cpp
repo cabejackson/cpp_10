@@ -3,23 +3,26 @@ using namespace std;
 
 int main() {
 
-    int size;
-    cout << "Size: ";
-    cin >> size;
-    // int myArray[size]; //not allowed bc it's not dynamic
-    int* myArray = new int[size];
+    int rows, cols;
 
-    for (int i = 0; i < size; i++){
-        cout << "Array[" << i << "]: ";
-        cin >> myArray[i];
-    }
-    for (int i = 0; i < size; i++){
-        cout << myArray[i] << " ";
-        // cout << *(myArray+i) << " "; //another way to access the element, by dereferencing
-    }
+    cout << "rows, cols: ";
+    cin >> rows >> cols;
 
-    delete[]myArray;
-    myArray = NULL;
+    int** table = new int*[rows]; //creates an int array of pointers
+    //** syntax for int pointer to a pointer??
+
+    for(int i = 0; i < rows; i++){
+        table[i] = new int[cols];
+    };
+
+    table[1][2] = 88;
+
+    //deallocating memory
+    for(int i = 0; i < rows; i++){
+        delete[] table[i];
+    };
+    delete[] table;
+    table = NULL;
 
     return 0;
 }
