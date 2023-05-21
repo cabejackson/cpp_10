@@ -3,26 +3,16 @@ using namespace std;
 
 int main() {
 
-    int rows, cols;
+    int savedMoney[5] = { 100, 200, 300, 400, 500 };
 
-    cout << "rows, cols: ";
-    cin >> rows >> cols;
+    int total = 0;
 
-    int** table = new int*[rows]; //creates an int array of pointers
-    //** syntax for int pointer to a pointer??
+    for(int i = 0; i < 5; i++) {
+        // cout << savedMoney[i] << endl; // error happens when you use i <= 5
+        total += savedMoney[i];
+    }
 
-    for(int i = 0; i < rows; i++){
-        table[i] = new int[cols];
-    };
-
-    table[1][2] = 88;
-
-    //deallocating memory
-    for(int i = 0; i < rows; i++){
-        delete[] table[i];
-    };
-    delete[] table;
-    table = NULL;
+    cout << "Total: " << total;
 
     return 0;
 }
